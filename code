@@ -1,0 +1,66 @@
+# Jonathan Rizkallah
+# 11/5/23
+
+"""Problem 1: Write an infinite loop that prints “Infinite”.
+An infinite loop never ends. The condition is always true. 
+
+"""
+
+while True: # This while loop will print Infinite as long as it is true!
+    print("Infinite") # To stop the loop we can terminate the terminal.
+
+  """Problem 2: Using a while loop, create a list called L that contains the numbers 0 to 10.
+On each iteration, the loop should append the current value of a counter variable to the
+list and then increase the counter by 1. The while loop should stop once the counter
+variable is greater than 10.
+
+"""
+
+L = [] # Initializes an empty list for L.
+counter = 0 # Initializes 0 for coubnter. The first number in our list will be zero because our code below appends first.
+
+while counter <= 10: # Here I created a while loop that will run as long as the value of counter is less than or equal to 10.
+    L.append(counter) # This will appened a value from counter to the list L within the range of the while loop.
+    counter += 1 # After each iteration, counter will add 1 to its previous value.
+    
+print(L) # This will print the list L once the while loop is executed.
+
+  """Problem 3: Using a while loop, ask the user to enter a number.
+Append each entered number to a list and add them together.
+Continue asking for a number until the sum of the list of
+numbers is greater than 100.
+
+"""
+
+
+numbers = [] # This creates an empty list for numbers.
+totalSum = 0 # initializes totalSum with zero.
+
+while totalSum <= 100: # Here I created a while loop that will run until totalSum is less than or equal to 100.
+    try:
+        userInput = float(input("Enter a number: "))
+        numbers.append(userInput)
+        totalSum += userInput
+    except ValueError:
+        print("That's not a valid number. Try again.")
+
+print("List of numbers:", numbers)
+print("Total sum:", totalSum)
+
+
+  """Problem 4: Create a while loop that initializes a counter at 0 and will
+run until the counter reaches 50. If the value of the counter is divisible
+by 10, append the value to the list called tens. Confirm the list results
+using a print statement.
+
+"""
+
+counter = 0 # Initializes counter with 0
+divisibleByTen = [] # Creates an empty list for divisibleByTen.
+
+while counter <= 50: # This while loop will run untill counter is greater than or equal to 50.
+    if counter % 10 == 0: # The statement within this if statement will run if the number is evenly divisible by 10.
+        divisibleByTen.append(counter) # This adds the values from counter to the list divisibleByTen. If the above if statement is satisfied.
+    counter += 1 # Sets new value of counter to previous value plus 1.
+
+print("Here is a list of numbers that are divisible by 10 within a range of 0-50:", divisibleByTen)
